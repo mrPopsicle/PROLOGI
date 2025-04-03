@@ -233,6 +233,20 @@ def to_string(tokens):
             output.append(token)
         i += 1
     return ''.join(output).replace(' )', ')').replace('( ', '(')
+    
+def main_menu():
+    while True:
+        print("\n==== Derivatives Calculator ====")
+        expr = input("Enter a function to differentiate (or type 'exit' to return): ")
+        if expr.lower() == 'exit':
+            break
+        try:
+            tokens = tokenize(expr)
+            derivative_tokens = differentiate(tokens)
+            derivative = to_string(derivative_tokens)
+            print("Derivative:", derivative)
+        except Exception as e:
+            print("Error", e)
 
 # Example usage:
 expr = "4x"
