@@ -23,11 +23,13 @@ def main_menu():
         choice = input("Enter your choice (1-5): ")
 
         if choice == '1':
-            derivatives_calculator()
+            print("Launching Derivatives Calculator...")
+            import Ver1
+            Ver1.main_menu()
         if choice == '2':
-            antiderivatives_calculator()
+            print("Work in Progress")
         if choice == '3':
-            matrix_calculator()
+            print("Work in Progress")
         if choice == '4':
             help_menu()
         if choice == '5':
@@ -36,15 +38,6 @@ def main_menu():
             break
         else:
             print("Invalid choice, please select from 1-5")
-
-def derivatives_calculator():
-    print("Launching Derivatives Calculator...")
-
-def antiderivatives_calculator():
-    print("Work in Progress")
-
-def matrix_calculator():
-    print("Work in Progress")
 
 
 if __name__=="__main__":
