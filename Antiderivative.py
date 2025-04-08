@@ -43,23 +43,26 @@ def integrate(coefficients, variables, exponents):
 
     return " + ".join(integrated_terms) + " + C"
 
-#Get lang yung user input dito
-user_inp = input("Enter your algebraic expression (e.g., 'x^2 + 2x + 3'): ")
-parsed = parse_algebraic(user_inp)
-#Then irrun yung buong define function based dito sa "parsed"
-coefficients = []
-variables = []
-exponents = []
-#This three lists will be stored as variables
-for term in parsed:
-    coef, var, exp = term
-    coefficients.append(coef)
-    variables.append(var)
-    exponents.append(exp)
+def main_antiderivative():
+    #Get lang yung user input dito
+    print("\n=== Antiderivative Calculator ===")
+    user_inp = input("Enter your algebraic expression (e.g., 'x^2 + 2x + 3'): ")
+    parsed = parse_algebraic(user_inp)
+    #Then irrun yung buong define function based dito sa "parsed"
+    coefficients = []
+    variables = []
+    exponents = []
+    #This three lists will be stored as variables
+    for term in parsed:
+        coef, var, exp = term
+        coefficients.append(coef)
+        variables.append(var)
+        exponents.append(exp)
 
-integrated_func = integrate(coefficients, variables, exponents)
+    integrated_func = integrate(coefficients, variables, exponents)
 
-print("Coefficients:", coefficients)
-print("Variables:", variables)
-print("Exponents:", exponents)
-print("Integrated Function:", integrated_func)
+    print("Coefficients:", coefficients)
+    print("Variables:", variables)
+    print("Exponents:", exponents)
+    print("Integrated Function:", integrated_func)
+    input("\nPress Enter to return to the main menu...")
