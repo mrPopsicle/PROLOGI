@@ -122,7 +122,6 @@ def main_matrix():
         elif choice == "5":
             inverse_matrix()
         elif choice == "6":
-            print("Exiting program... Goodbye!")
             break
         else:
             print("Invalid choice. Please choose a number between 1 and 6.")
