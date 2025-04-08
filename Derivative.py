@@ -298,7 +298,9 @@ def simplify_result(result):
     return result
 
 def main():
-    print("Simple Derivative Calculator")
+    print("\n=================================")
+    print("     DERIVATIVE CALCULATOR")
+    print("=================================")
     print("Supports: polynomials (x^n)")
     print("trigonometric functions (sin, cos, tan, csc, sec, cot)")
     print("logarithms (ln), products (f*g), and quotients (f/g)")
