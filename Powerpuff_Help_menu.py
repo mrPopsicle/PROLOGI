@@ -1,5 +1,5 @@
-import sys
 import Ver1
+import Matrix
 
 def help_menu():
     help_ascii = """
@@ -10,14 +10,14 @@ def help_menu():
     print(help_ascii)
     print("- Derivatives Calculator: Computes the derivative of a function (polynomials, trigonometric functions, logarithmic functions).")
     print("- Antiderivatives Calculator: Computes the antiderivative of a function.")
-    print("- Matrix Calculator: Performs matrix operations.")
+    print("- Matrix Calculator: Performs matrix operations (addition, subtraction, multiplication, determinant, inverse of a matrix).")
 
 def main_menu():
     while True:
         print("\n===== Main Menu =====")
         print("1. Derivatives Calculator")
-        print("2. Antiderivatives Calculator (WIP)")
-        print("3. Matrix Calculator (WIP)")
+        print("2. Antiderivatives Calculator")
+        print("3. Matrix Calculator")
         print("4. Help")
         print("5. Exit")
 
@@ -30,14 +30,18 @@ def main_menu():
             except Exception as e:
                 print(f"\n Error: {e}")
         elif choice == '2':
-            print("\n Antiderivatives Calculator is a Work in Progress.")
+            print("\nLaunching Antiderivatives Calculator...")
         elif choice == '3':
-            print("\n Matrix Calculator is a Work in Progress.")
+            print("\nLaunching Matrix Calculator.")
+            try:
+                Matrix.main_matrix()
+            except Exception as e:
+                print(f"\nError: {e}")
         elif choice == '4':
             help_menu()
         elif choice == '5':
             print("\nExiting program... Thank you!")
-            sys.exit()
+            break
         else:
             print("\n Invalid choice! Please enter a number between 1 and 5.")
 
