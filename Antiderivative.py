@@ -45,7 +45,9 @@ def integrate(coefficients, variables, exponents):
 
 def main_antiderivative():
     #Get lang yung user input dito
-    print("\n=== Antiderivative Calculator ===")
+    print("\n=====================================")
+    print("     ANTIDERIVATIVE CALCULATOR")
+    print("=====================================")
     user_inp = input("Enter your algebraic expression (e.g., 'x^2 + 2x + 3'): ")
     parsed = parse_algebraic(user_inp)
     #Then irrun yung buong define function based dito sa "parsed"
