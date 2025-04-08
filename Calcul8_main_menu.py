@@ -41,7 +41,7 @@ def main_menu():
             except Exception as e:
                 print(f"\nError: {e}")
         elif choice == '3':
-            print("\nLaunching Matrix Calculator.")
+            print("\nLaunching Matrix Calculator...")
             try:
                 Matrix.main_matrix()
             except Exception as e:
