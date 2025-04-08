@@ -14,6 +14,10 @@ def help_menu():
     print("- Matrix Calculator: Performs matrix operations (addition, subtraction, multiplication, determinant, inverse of a matrix).")
 
 def main_menu():
+    print("================ Calcul8 ================")
+    print(" A Calculator program for 3 Math topics")
+    print("=========================================")
+    
     while True:
         print("\n===== Main Menu =====")
         print("1. Derivatives Calculator")
