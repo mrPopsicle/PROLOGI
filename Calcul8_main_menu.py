@@ -1,4 +1,5 @@
 import Derivative
+import Antiderivative
 import Matrix
 
 def help_menu():
@@ -31,6 +32,10 @@ def main_menu():
                 print(f"\n Error: {e}")
         elif choice == '2':
             print("\nLaunching Antiderivatives Calculator...")
+            try:
+                Antiderivative.main_antiderivative()
+            except Exception as e:
+                print(f"\nError: {e}")
         elif choice == '3':
             print("\nLaunching Matrix Calculator.")
             try:
