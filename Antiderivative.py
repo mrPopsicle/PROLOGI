@@ -1,4 +1,4 @@
-Lim Marc Jairo
+
 def parse_algebraic(expr):
     terms = expr.split("+") #In this case, the "+" is the delimiter, so in the cases that the expression is "a+b+c", the split function will return a list of three strings: "a", "b", "c". 
     results = []
