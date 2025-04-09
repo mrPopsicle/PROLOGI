@@ -1,13 +1,13 @@
+Lim Marc Jairo
 def parse_algebraic(expr):
-    expr = expr.strip().replace(" ", "")
-    terms = expr.split("+")
+    terms = expr.split("+") #In this case, the "+" is the delimiter, so in the cases that the expression is "a+b+c", the split function will return a list of three strings: "a", "b", "c". 
     results = []
-
-    for term in terms:
+    
+    for term in terms: 
         if "^" in term:
             before_exp, exp_str = term.split("^")
             exponent = int(exp_str)
-            if before_exp[-1].isalpha():
+            if before_exp[-1]:
                 var = before_exp[-1]
                 coef_str = before_exp[:-1]
                 coef = int(coef_str) if coef_str else 1
@@ -16,7 +16,7 @@ def parse_algebraic(expr):
                 coef = int(before_exp)
         else:
             exponent = 1
-            if term[-1].isalpha():
+            if term[-1]:
                 var = term[-1]
                 coef_str = term[:-1]
                 coef = int(coef_str) if coef_str else 1
